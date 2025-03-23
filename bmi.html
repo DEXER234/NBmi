@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="bmichart.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <title>Body-Mass-Index</title>
+</head>
+<body>
+    <div class="logo">
+        <img src="logo-transparent-png.png" alt="">
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>BMI CALCULATOR</h1>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="input">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" placeholder="Enter your height">
+                </div>
+                <div class="input">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter your weight">
+                </div>
+                <button onclick="calculate()">Calculate</button>
+            </div>
+            <div class="right">
+                <div class="result">
+                    <h2>Your BMI</h2>
+                    <h3 id="bmi">0</h3>
+                </div>
+                <div class="result">
+                    <h2>Category</h2>
+                    <h3 id="category">NaN</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="scale">
+        <div class="scale-bar">
+            <span>Underweight</span>
+            <span>Normal</span>
+            <span>Pre-obesity</span>
+            <span>Obese I</span>
+            <span>Obese II</span>
+            <span>Obese III</span>
+            <i class='bx bxs-down-arrow' id="indicator"></i>
+        </div>
+    </div>
+    <div class="converter">
+        <h2>Height and Weight Converter</h2>
+        <div class="input">
+            <label for="feet">Height (ft)</label>
+            <input type="number" id="feet" placeholder="Enter height in feet">
+            <button onclick="convertHeight()">Convert to cm</button>
+            <p id="heightResult">Height in cm: 0</p>
+        </div>
+        <div class="input">
+            <label for="pounds">Weight (lbs)</label>
+            <input type="number" id="pounds" placeholder="Enter weight in pounds">
+            <button onclick="convertWeight()">Convert to kg</button>
+            <p id="weightResult">Weight in kg: 0</p>
+        </div>
+    </div>
+    <script src="bmi.js"></script>
+</body>
+</html>

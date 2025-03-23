@@ -1,0 +1,222 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #000000;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.logo img {
+    width: auto;
+    height: 120px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #02191c;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.left,
+.right {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.input {
+    margin-bottom: 20px;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.input input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.input input:focus {
+    border-color: #02191c;
+    outline: none;
+}
+
+button {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+}
+
+.result {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.result h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #333;
+}
+
+.result h3 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #007BFF;
+}
+
+.scale {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.scale-bar {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    position: relative;
+    width: 90%;
+    height: 70px;
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.909) 0%, rgba(0, 255, 0, 0.893) 20%, rgba(255, 255, 0, 0.885) 40%, #ffa600dd 60%, #ff4400db 80%, rgba(255, 0, 0, 0.86) 100%);
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+#indicator {
+    position: absolute;
+    margin-bottom: 43px;
+    font-size: 1.5em;
+    color: #03251b;
+    transition: left 1s;
+}
+
+.scale-bar span {
+    flex: 1;
+    text-align: center;
+}
+
+.converter {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.converter h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.converter .input {
+    margin-bottom: 20px;
+}
+
+.converter .input label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+.converter .input input {
+    width: 75%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+}
+
+.converter .input input:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.converter p {
+    font-size: 1.2em;
+    color: #000000;
+}
